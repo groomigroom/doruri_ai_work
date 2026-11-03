@@ -39,6 +39,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
+            transition: all 0.6s ease 0s;
         }
 
         .one_hundred_vw {
@@ -51,7 +52,7 @@
 <body>
     <div class="full">
         <button class="up_button" onclick="fullTrainUp()">up</button>
-        <button class="down_button">down</button>
+        <button class="down_button" onclick="fullTrainDown()">down</button>
         <div class="full_train">
             <section class="one_hundred_vw" style="background-color: aqua;"></section>
             <section class="one_hundred_vw" style="background-color: rgb(129, 79, 221);"></section>
@@ -61,8 +62,14 @@
         let full_train = document.querySelector(".full_train");
         let full_train_top = 0;
         function fullTrainUp() {
-            if (full_train_top !== 100) {
+            if (full_train_top !== -100) {
                 full_train_top -= 100;
+                full_train.style.top = `${full_train_top}vh`;
+            }
+        }
+        function fullTrainDown() {
+            if (full_train_top !== 0) {
+                full_train_top += 100;
                 full_train.style.top = `${full_train_top}vh`;
             }
         }
