@@ -16,6 +16,14 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
+            position: relative;
+        }
+
+        .full_train {
+            width: 100vw;
+            height: 200vh;
+            position: absolute;
+            left: 0px;
         }
 
         .one_hundred_vw {
@@ -27,8 +35,12 @@
 
 <body>
     <div class="full">
-        <section class="one_hundred_vw" style="background-color: aqua;"></section>
-        <section class="one_hundred_vw" style="background-color: rgb(129, 79, 221);"></section>
+        <button class="up_button">up</button>
+        <button>down</button>
+        <div class="full_train">
+            <section class="one_hundred_vw" style="background-color: aqua;"></section>
+            <section class="one_hundred_vw" style="background-color: rgb(129, 79, 221);"></section>
+        </div>
     </div>
 </body>
 
