@@ -56,13 +56,14 @@
         <div class="full_train">
             <section class="one_hundred_vw" style="background-color: aqua;"></section>
             <section class="one_hundred_vw" style="background-color: rgb(129, 79, 221);"></section>
+            <section class="one_hundred_vw" style="background-color: rgb(169, 255, 98);"></section>
         </div>
     </div>
     <script>
         let full_train = document.querySelector(".full_train");
         let full_train_top = 0;
         function fullTrainUp() {
-            if (full_train_top !== -100) {
+            if (full_train_top !== -200) {
                 full_train_top -= 100;
                 full_train.style.top = `${full_train_top}vh`;
             }
