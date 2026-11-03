@@ -50,7 +50,7 @@
 
 <body>
     <div class="full">
-        <button class="up_button">up</button>
+        <button class="up_button" onclick="fullTrainUp()">up</button>
         <button class="down_button">down</button>
         <div class="full_train">
             <section class="one_hundred_vw" style="background-color: aqua;"></section>
@@ -61,7 +61,10 @@
         let full_train = document.querySelector(".full_train");
         let full_train_top = 0;
         function fullTrainUp() {
-
+            if (full_train_top !== 100) {
+                full_train_top -= 100;
+                full_train.style.top = `${full_train_top}px`;
+            }
         }
     </script>
 </body>
