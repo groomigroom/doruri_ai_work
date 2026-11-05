@@ -74,6 +74,37 @@
                 full_train.style.top = `${full_train_top}vh`;
             }
         }
+/*
+		const ioi_e_move_div = document.querySelector(".ioi_e_move_div");
+
+        let top_position = 200;
+        let left_position = 200;
+        const position_value = 10;
+
+        window.addEventListener("keydown", (event) => {
+            switch (event.code) {
+                case "ArrowUp":
+                    top_position -= position_value;
+                    break;
+                case "ArrowDown":
+                    top_position += position_value;
+                    break;
+                case "ArrowLeft":
+                    left_position -= position_value;
+                    break;
+                case "ArrowRight":
+                    left_position += position_value;
+                    break;
+                default:
+                    return;
+            }
+
+            //화살표 키로 화면이 내려가는 현상 방지하기
+            event.preventDefault();
+
+            ioi_e_move_div.style.top = `${top_position + "px"}`;
+            ioi_e_move_div.style.left = `${left_position + "px"}`;
+        });*/
     </script>
 </body>
 
