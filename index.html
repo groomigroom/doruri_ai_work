@@ -62,39 +62,20 @@
     <script>
         let full_train = document.querySelector(".full_train");
         let full_train_top = 0;
-        function fullTrainUp() {
-            if (full_train_top !== -200) {
-                full_train_top -= 100;
-                full_train.style.top = `${full_train_top}vh`;
-            }
-        }
-        function fullTrainDown() {
-            if (full_train_top !== 0) {
-                full_train_top += 100;
-                full_train.style.top = `${full_train_top}vh`;
-            }
-        }
-/*
-		const ioi_e_move_div = document.querySelector(".ioi_e_move_div");
-
-        let top_position = 200;
-        let left_position = 200;
-        const position_value = 10;
-
-        window.addEventListener("keydown", (event) => {
-            switch (event.code) {
+		window.addEventListener("keydown", (event) => {
+			switch (event.code) {
                 case "ArrowUp":
-                    top_position -= position_value;
-                    break;
+					if (full_train_top !== -200) {
+                    	full_train_top -= 100;
+                    	break;
+					} else {
+						break;
+					}
                 case "ArrowDown":
-                    top_position += position_value;
-                    break;
-                case "ArrowLeft":
-                    left_position -= position_value;
-                    break;
-                case "ArrowRight":
-                    left_position += position_value;
-                    break;
+					if (full_train_top !== 0) {
+                    	full_train_top += 100;
+                    	break;
+					}
                 default:
                     return;
             }
@@ -102,9 +83,8 @@
             //화살표 키로 화면이 내려가는 현상 방지하기
             event.preventDefault();
 
-            ioi_e_move_div.style.top = `${top_position + "px"}`;
-            ioi_e_move_div.style.left = `${left_position + "px"}`;
-        });*/
+            full_train.style.top = `${full_train_top + "vh"}`;
+		});
     </script>
 </body>
 
