@@ -118,6 +118,17 @@
 			border: 5px solid #191919;
 			border-radius: 25px;
 		}
+
+		.one_hundred_imgs>img {
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+		}
+
+		.one_hundred_imgs>img.on {
+			width: 500px;
+			height: 500px;
+		}
 	</style>
 </head>
 
@@ -126,7 +137,7 @@
 		<div class="full_train">
 			<section class="one_hundred_vw">
 				<section class="one_hundred_inner">
-					
+
 				</section>
 			</section>
 			<section class="one_hundred_vw">
@@ -135,13 +146,14 @@
 						style="width: 100%; height: 65px; display: flex; justify-content: center; align-items: center;">
 						<h2 style="font-size: 25px;">▪ 제목 ▪</h2><!--25px로-->
 					</section>
-					<section class="one_hundred_imgs" style="width: 100%; height: 340px; background-color: aqua; display: flex; justify-content: center; align-items: center;">
-						<img src="" alt="" style="width: 300px; height: 300px; background-color: blue;">
+					<section class="one_hundred_imgs"
+						style="width: 100%; height: 340px; background-color: aqua; display: flex; justify-content: center; align-items: center;">
+						<img src="" alt="" style="">
 					</section>
 					<section class="one_hundred_pp" style="width: 100%;">
 						<p style="width: 100%; text-align: center;">내용<br>
-						내용<br>
-						내용
+							내용<br>
+							내용
 						</p>
 					</section>
 				</section>
@@ -177,10 +189,10 @@
 
 			full_train.style.top = `${full_train_top + "vh"}`;
 		});
-		const one_hundred_imgs_s = document.querySelectorAll(".one_hundred_imgs");
-		one_hundred_imgs_s.forEach((imgg, index)=>{
-			imgg.addEventListener("click", ()=>{
-				
+		const one_hundred_imgs_s = document.querySelectorAll(".one_hundred_imgs>img");
+		one_hundred_imgs_s.forEach((imgg, index) => {
+			imgg.addEventListener("click", () => {
+				imgg.classList.toggle("on");
 			});
 		});
 	</script>
